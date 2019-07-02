@@ -1,0 +1,17 @@
+10.200.1.242 exceted cmd OK
+10.200.1.242 ssh is closed
+10.200.1.243 exceted cmd OK
+10.200.1.243 ssh is closed
+10.200.1.241 exceted cmd OK
+10.200.1.241 ssh is closed
+192.168.253.3 have some Exception when cinnected
+b'\r\n\r\n\t*************************************************************\r\n\t*
+      FHN USP (R) Software for Fengine S5800            *\r\n\t*
+           *\r\n\t*
+                             Version  V210R240
+          *\r\n\t*
+          *\r\n\t*
+  Copyright (c) 2000-2015 by FiberHome Networks Co., Ltd.
+   *\r\n\t*************************************************************\r\n\r\n
+   BFJD-ISC3-M-S5852T-1#'
+TypeError: a bytes-like object is required, not 'str'

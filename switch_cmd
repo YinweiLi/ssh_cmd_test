@@ -1,0 +1,54 @@
+configure   #进入配置模式
+
+snmp trap-server 192.168.159.78 162 ZWzabbix123 v2    #配置snmp
+
+no filter-list global in 2002  #撤销2002
+
+filter-list 2002   #进入2002配置
+filter 4 tcp 192.168.159.0/24 any 192.168.253.0/24 161
+filter 4 action permit
+filter 8 udp 192.168.159.0/24 any 192.168.253.0/24 161
+filter 8 action permit
+
+exit    #退出filter-list 2002配置
+
+filter-list global in 2002   #filter-2002生效
+
+exit   #退出configure
+
+write file    #写文件
+
+y    #交互
+
+
+cd /
+cd etc
+pwd
+
+configure
+exit
+write file
+y
+
+
+
+
+configure
+
+snmp trap-server 192.168.159.78 162 ZWzabbix123 v2
+
+no filter-list global in 2002
+filter-list 2002
+filter 4 tcp 192.168.159.0/24 any 192.168.253.0/24 161
+filter 4 action permit
+filter 8 udp 192.168.159.0/24 any 192.168.253.0/24 161
+filter 8 action permit
+exit
+
+filter-list global in 2002
+exit
+write file
+
+y
+
+exit
